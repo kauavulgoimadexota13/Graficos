@@ -1,4 +1,3 @@
-
 const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/dados-globais.json'
 
 async function vizualizarInformacoesGlobais() {
@@ -12,5 +11,9 @@ async function vizualizarInformacoesGlobais() {
 
     const paragrafo = document.createElement('p')
     paragrafo.classList.add('graficos-container__texto')
-    paragrafo.innerHTML = `Você sabia que o mundo tem <span>${pessoasNoMundo} bilhões</span> de pessoas e que aproximadamente <span>${pessoasConectadas
-                                                                                                                                      
+    paragrafo.innerHTML = `Você sabia que o mundo tem <span>${pessoasNoMundo} bilhões</span> de pessoas e que aproximadamente <span>${pessoasConectadas} bilhões</span> estão conectadas? Isso representa <span>${porcentagemConectada}%</span> da população mundial. <br> Além disso, os usuários de internet estão gastando em média <span>${horas}h ${minutos}m</span> por dia online.`
+    document.getElementById('graficos-container').appendChild(paragrafo)
+}
+
+vizualizarInformacoesGlobais()
+
